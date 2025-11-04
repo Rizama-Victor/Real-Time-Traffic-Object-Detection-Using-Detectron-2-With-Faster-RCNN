@@ -29,6 +29,34 @@ Accurate identification of objects from real-time video is necessary for effecti
 | **Visualizer (Detectron2)** | Handled drawing of detection boxes and class labels on images and frames.                             |
 
 ## 🪜 Step-by-step Procedure
+1. **Installation and Setup:** This involved the installation of all necessary libraries as already outlined in the **Tools and Technologies** section to ensure that all dependencies required for training and testing the object detection model was available.
+2. **Repository Setup:** Involved cloning the official Detectron2 GitHub repository and installing it locally to enable access to its built-in functions and model configurations.
+3. **Dataset Allocation:** Three datasets: train, validation, and test sets were allocated using COCO format annotations. Each dataset’s path and JSON file were linked, allowing Detectron2 to load and process them directly.
+4. **Data Visualization:** Before training, a few training images and their annotations were visualized using the Visualizer module to confirm the readiness of the dataset for training.
+5. **Model Configuration:** The Faster R-CNN architecture with a ResNeXt-101 backbone was loaded from Detectron2’s model zoo. Training hyper-parameters such as learning rate, batch size, training iterations, and number of object classes (12) were also customized to suit the dataset. A collection of the hyperparameters and configuration parameters used is given below:
+
+| Parameter              | Value                                                                                |
+| --------------------------- | ----------------------------------------------------------------------------------------------------- |
+| **Batch Size**                  | 4               |
+| **Warm-up Iterations**                 | 1000                      |
+| **Maximum Iterations**             | 1500           |
+| **Learning Rate Decay Factor**                  | 0.05                     |
+| **ROI Batch Size per Image**              | 64 |
+| **Evaluation Period**                  | 500    |
+| **Data Loader Workers**                  | 4    |
+
+6. **Custom Training Setup:** A subclass called CocoTrainer was created to enable COCO evaluation during and after training, allowing the model’s performance to be assessed periodically.
+7. **Model Training:** The DefaultTrainer was used to train the model using the custom dataset. Training involved oadjusting the model’s weights through multiple iterations to improve its detection accuracy.
+8. **Model Evaluation:** After training, the model was evaluated on the test dataset using COCOEvaluator to measure its detection performance and compute metrics like precision, recall, and Average Precision (AP).
+9. **Inferencing and Visualization:** The trained model was used to make predictions on test images. The predicted bounding boxes and class labels were visualized using matplotlib for clear result display. This involved the use of 3 function namely:
+    - _predict_and_display_frame()_ function which received an image frame, performed inference using the trained model, and draws bounding boxes with class labels on detected traffic objects.
+    - _live_tracking()_ function read video frames one by one using OpenCV, applied the model predictions, and returned the processed frames simulating real-time object tracking.
+    - _detect_objects_in_image()_ function took a still image as input and performed the object detection, returning the labeled image output.
+11. **Gradio Inteface Setup:** A Gradio web interface was created using _**gr.Blocks()**_. It provided users with two main options:
+    - Upload or stream a video to perform live traffic detection.
+    - Upload an image to detect and label objects within it.
+12. **Interface Functionality:** Users could click buttons to start detection on their chosen input, and the results (processed video or image) were displayed instantly within the interface.
+13. **App Launch:** Finally, the Gradio app was launched using _interface.launch(debug=True)_, and allowing anyone to interact with the trained model in real-time.
 
 ## 📚 References
 Obi-Obuoha A. , Rizama V.S. _"Real-time traffic object detection using detectron 2 with faster R-CNN"_ World Journal of Advanced Research and Reviews Volume 28 Issue 1 2024 Page 2173–2189.
