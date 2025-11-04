@@ -47,7 +47,18 @@ Accurate identification of objects from real-time video is necessary for effecti
 
 6. **Custom Training Setup:** A subclass called CocoTrainer was created to enable COCO evaluation during and after training, allowing the model’s performance to be assessed periodically.
 7. **Model Training:** The DefaultTrainer was used to train the model using the custom dataset. Training involved oadjusting the model’s weights through multiple iterations to improve its detection accuracy.
-8. **Model Evaluation:** After training, the model was evaluated on the test dataset using COCOEvaluator to measure its detection performance and compute metrics like precision, recall, and Average Precision (AP).
+8. **Model Evaluation:** After training, the model was evaluated on the test dataset using COCOEvaluator to measure its detection performance and compute metrics like precision, recall, and Average Precision (AP). The model's evaluation metrics is presented below:
+
+| Metric              | Value(%)                   |
+| --------------------------- | ------------------ |
+| **AP@50-95**                  | 44.2             |
+| **AP@50**                 | 76.9                 |
+| **AP@75**             | 43.9                     |
+| **APs (Small Objects)**                  | 18.2  |
+| **APm (Medium Objects)**              | 35.8     |
+| **APl (Large Objects)**                  | 53.1  |
+| **AR@50-95**                  | 57.9             |
+
 9. **Inferencing and Visualization:** The trained model was used to make predictions on test images. The predicted bounding boxes and class labels were visualized using matplotlib for clear result display. This involved the use of 3 function namely:
     - _predict_and_display_frame()_ function which received an image frame, performed inference using the trained model, and draws bounding boxes with class labels on detected traffic objects.
     - _live_tracking()_ function read video frames one by one using OpenCV, applied the model predictions, and returned the processed frames simulating real-time object tracking.
