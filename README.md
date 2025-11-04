@@ -49,15 +49,15 @@ Accurate identification of objects from real-time video is necessary for effecti
 7. **Model Training:** The DefaultTrainer was used to train the model using the custom dataset. Training involved oadjusting the model’s weights through multiple iterations to improve its detection accuracy.
 8. **Model Evaluation:** After training, the model was evaluated on the test dataset using COCOEvaluator to measure its detection performance and compute metrics like precision, recall, and Average Precision (AP). The model's evaluation metrics is presented below:
 
-| Metric              | Value(%)                   |
-| --------------------------- | ------------------ |
-| **AP@50-95**                  | 44.2             |
-| **AP@50**                 | 76.9                 |
-| **AP@75**             | 43.9                     |
-| **APs (Small Objects)**                  | 18.2  |
-| **APm (Medium Objects)**              | 35.8     |
-| **APl (Large Objects)**                  | 53.1  |
-| **AR@50-95**                  | 57.9             |
+| **Metric**               | **Value (%)** | **Remarks**                                                                                                                                                     |
+| ------------------------ | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **AP@50-95**             | 44.2          | Indicated the overall detection accuracy across multiple IoU thresholds suggesting closely balanced level of precision and recall performance.                  |
+| **AP@50**                | 76.9          | Reflected strong localization accuracy at a relaxed threshold, meaning the model effectively detected most traffic objects when bounding box matching was lenient. |
+| **AP@75**                | 43.9          | Demonstrated reduced precision under stricter bounding box criteria, implying that tighter localization remained a challenge.                                    |
+| **APs (Small Objects)**  | 18.2          | Showed difficulty detecting small objects (like distant vehicles or traffic lights) due to limited pixel representation and finer visual details.                |
+| **APm (Medium Objects)** | 35.8          | Indicated low detection performance for medium-sized objects, suggesting the need for improvement.                                      |
+| **APl (Large Objects)**  | 53.1          | Revealed moderate detection capability for large objects as compared to small objects, most likely because they offered more visual information for accurate localization.                                         |
+| **AR@50-95**             | 57.9          | Reflected reasonable sensitivity and object coverage, but suggested potential to improve recall for more complete detection results.                              |
 
 9. **Inferencing and Visualization:** The trained model was used to make predictions on test images. The predicted bounding boxes and class labels were visualized using matplotlib for clear result display. This involved the use of 3 functions namely:
     - _predict_and_display_frame()_ function which received an image frame, performed inference using the trained model, and draws bounding boxes with class labels on detected traffic objects.
@@ -70,11 +70,19 @@ Accurate identification of objects from real-time video is necessary for effecti
 13. **App Launch:** Finally, the Gradio app was launched using _interface.launch(debug=True)_, and allowing anyone to interact with the trained model in real-time.
 
 <p align="center">
-  <img src="Test_Image_1.jpg" alt="Detection Results 1" width="500" />
-  <img src="Test_Image_2.png" alt="Detection Results 2" width="500" />
+  <img src="Test_Image_1.jpg" alt="Detection Results 1" width="400" />
+  <img src="Test_Image_2.png" alt="Detection Results 2" width="400" />
     <br>
     <em> Fig 1: Visualization of the Model's Result on Test Images </em>
 </p>
+
+## 💡Key Insights
+- The dataset distribution revealed that some classes, such as _vehicles_ and _Traffic Lights_ were mostly represented while others such as _Road-traffic_ had no instances at all.
+- Underrepresentation of classes such as _Buses_, and _Bicycles_ might have experienced lower detection accuracy because of the limited number of training samples suggestng that expanding the dataset could enhance the model's performance across all categories.
+- The time to load  the data was **0.0016 seconds** which indicated quick dataset loading.
+- The model showed a strong performance on high performing classes like _Fire Hydrants (59.30%), Buses (54.80%)_, and _Vehicles (49.90%)_ likely because they contained more distinct and easily recognizable feeatures.
+- Low peforming classes like _crossroads (12.90%)_ were mostly due to the highly varying visual patterns, which vaired based on environment.
+- Medium performing classes like _Traffic Lights, Motorcycles,_ and _Bicycles_ achived moderate AP values suggesting that while the model performed reasonbaly well in detecting these objects, there was still room for improvemennt.
 
 ## 📚 References
 Obi-Obuoha A. , Rizama V.S. _"Real-time traffic object detection using detectron 2 with faster R-CNN"_ World Journal of Advanced Research and Reviews Volume 28 Issue 1 2024 Page 2173–2189.
