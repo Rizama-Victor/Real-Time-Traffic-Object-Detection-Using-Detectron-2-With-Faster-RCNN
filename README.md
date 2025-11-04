@@ -69,6 +69,13 @@ Accurate identification of objects from real-time video is necessary for effecti
 12. **Interface Functionality:** Users could click buttons to start detection on their chosen input, and the results (processed video or image) were displayed instantly within the interface.
 13. **App Launch:** Finally, the Gradio app was launched using _interface.launch(debug=True)_, and allowing anyone to interact with the trained model in real-time.
 
+<p align="center">
+  <img src="Test_Image_1.jpg" alt="Detection Results 1" width="500" />
+  <img src="Test_Image_2.png" alt="Detection Results 2" width="500" />
+    <br>
+    <em> Fig 1: Visualization of the Model's Result on Test Images </em>
+</p>
+
 ## 📚 References
 Obi-Obuoha A. , Rizama V.S. _"Real-time traffic object detection using detectron 2 with faster R-CNN"_ World Journal of Advanced Research and Reviews Volume 28 Issue 1 2024 Page 2173–2189.
 [Access the Full Paper](https://wjarr.com/sites/default/files/WJARR-2024-3559.pdf)
