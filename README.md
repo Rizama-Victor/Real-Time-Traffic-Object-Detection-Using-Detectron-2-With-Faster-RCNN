@@ -59,7 +59,7 @@ Accurate identification of objects from real-time video is necessary for effecti
 | **APl (Large Objects)**                  | 53.1  |
 | **AR@50-95**                  | 57.9             |
 
-9. **Inferencing and Visualization:** The trained model was used to make predictions on test images. The predicted bounding boxes and class labels were visualized using matplotlib for clear result display. This involved the use of 3 function namely:
+9. **Inferencing and Visualization:** The trained model was used to make predictions on test images. The predicted bounding boxes and class labels were visualized using matplotlib for clear result display. This involved the use of 3 functions namely:
     - _predict_and_display_frame()_ function which received an image frame, performed inference using the trained model, and draws bounding boxes with class labels on detected traffic objects.
     - _live_tracking()_ function read video frames one by one using OpenCV, applied the model predictions, and returned the processed frames simulating real-time object tracking.
     - _detect_objects_in_image()_ function took a still image as input and performed the object detection, returning the labeled image output.
