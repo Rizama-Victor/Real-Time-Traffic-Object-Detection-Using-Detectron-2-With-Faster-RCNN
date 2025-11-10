@@ -7,7 +7,6 @@ Accurate identification of objects from real-time video is necessary for effecti
 
 - To develop a computer vision model capable of detecting and identifying multiple key traffic objects such as vehicles, traffic lights, buses, crosswalks, motorcycles etc.
 - To design an interactive Gradio-based interface that allows users to perform live detection on video feeds or static images.
-- To demonstrate the practical application of neural network–based object detection in urban traffic management systems.
 - To evaluate and visualize the detection performance of the model on real-world traffic data.
 
 ## 🛠️ Tools and Technologies Used
@@ -60,7 +59,7 @@ Accurate identification of objects from real-time video is necessary for effecti
 | **AR@50-95**             | 57.9          | Reflected reasonable sensitivity and object coverage, but suggested potential to improve recall for more complete detection results.                              |
 
 9. **Inferencing and Visualization:** The trained model was used to make predictions on test images. The predicted bounding boxes and class labels were visualized using matplotlib for clear result display. This involved the use of 3 functions namely:
-    - _predict_and_display_frame()_ function which received an image frame, performed inference using the trained model, and draws bounding boxes with class labels on detected traffic objects.
+    - _predict_and_display_frame()_ function which received an image frame, performed inference using the trained model, and drawed bounding boxes with class labels on detected traffic objects.
     - _live_tracking()_ function read video frames one by one using OpenCV, applied the model predictions, and returned the processed frames simulating real-time object tracking.
     - _detect_objects_in_image()_ function took a still image as input and performed the object detection, returning the labeled image output.
 11. **Gradio Inteface Setup:** A Gradio web interface was created using _**gr.Blocks()**_. It provided users with two main options:
@@ -79,7 +78,6 @@ Accurate identification of objects from real-time video is necessary for effecti
 ## 💡Key Insights
 - The dataset distribution revealed that some classes, such as _vehicles_ and _Traffic Lights_ were mostly represented while others such as _Road-traffic_ had no instances at all.
 - Underrepresentation of classes such as _Buses_, and _Bicycles_ might have experienced lower detection accuracy because of the limited number of training samples suggestng that expanding the dataset could enhance the model's performance across all categories.
-- The time to load  the data was **0.0016 seconds** which indicated quick dataset loading.
 - The model showed a strong performance on high performing classes like _Fire Hydrants (59.30%), Buses (54.80%)_, and _Vehicles (49.90%)_ likely because they contained more distinct and easily recognizable feeatures.
 - Low peforming classes like _crossroads (12.90%)_ were mostly due to the highly varying visual patterns, which vaired based on environment.
 - Medium performing classes like _Traffic Lights, Motorcycles,_ and _Bicycles_ achived moderate AP values suggesting that while the model performed reasonbaly well in detecting these objects, there was still room for improvemennt.
