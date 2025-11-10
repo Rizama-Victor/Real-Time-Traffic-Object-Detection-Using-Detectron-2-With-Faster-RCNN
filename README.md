@@ -19,7 +19,7 @@ Accurate identification of objects from real-time video is necessary for effecti
 | **OpenCV**                  | Used for capturing, reading, and processing video and image frames for inference.                     |
 | **Detectron2**              | Core framework used to configure, train, and run the Faster R-CNN model for traffic object detection. |
 | **Gradio**                  | Enabled creation of an interactive user interface for real-time video and image detection testing.    |
-| **Google Colab**            | Provided GPU computational resources and cloud environment for running model training and inference.  |
+| **Kaggle**                  | Provided free GPU computational resources and cloud environment for running model training and inference.  |
 | **Google Drive**            | Used as storage for saving and loading the trained model weights (`model_final.pth`).                 |
 | **NumPy**                   | Supported image array manipulation and data preprocessing.                                            |
 | **Matplotlib**              | Used for visualization and performance graph plotting during model training.                          |
