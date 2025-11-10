@@ -1,5 +1,5 @@
 # 🛣️ Real-time Traffic Object Detection Using Detectron 2 with Faster RCNN
-This repository contains the implementation of my research titled [_"Real-time Traffic Object Detection Using Detectron 2 with Faster RCNN"_](https://wjarr.com/content/real-time-traffic-object-detection-using-detectron-2-faster-r-cnn), published in World Journal of Advanced Research and Reviews (2024) authored by [Rizama Victor](https://github.com/Rizama-Victor) and [Prince Abiamamela Obi-Obuoha](https://github.com/MelaObuoha) at the National Centre for Artificial Intelligence and Robotics (NCAIR), Nigeria.
+This repository contains the implementation of my research titled [_"Real-time Traffic Object Detection Using Detectron 2 with Faster RCNN"_](https://wjarr.com/content/real-time-traffic-object-detection-using-detectron-2-faster-r-cnn), published in World Journal of Advanced Research and Reviews (2024) authored by [Rizama Victor](https://github.com/Rizama-Victor), [Prince Abiamamela Obi-Obuoha](https://github.com/MelaObuoha), and [Ifeanyichukwu Okafor](https://github.com/ifyyy10) at the National Centre for Artificial Intelligence and Robotics (NCAIR), Nigeria.
 ## 🔍 Overview
 Accurate identification of objects from real-time video is necessary for effective traffic analysis as this plays a vital role in providing drivers and authorities a comprehensive understanding of the road and surrounding environment. Fortunately, modern algorithms such as neural network based architecture with high detection accuracy, like Faster R-CNN are at the center of this process. The project focuses on developing a model capable of identifying key traffic objects such as traffic lights, vehicles, buses, crossroads etc., for urban traffic applications using an interactive Gradio interface and Detectron2’s Faster R-CNN architecture.
 
@@ -83,7 +83,7 @@ Accurate identification of objects from real-time video is necessary for effecti
 - Medium performing classes like _Traffic Lights, Motorcycles,_ and _Bicycles_ achived moderate AP values suggesting that while the model performed reasonbaly well in detecting these objects, there was still room for improvemennt.
 
 ## 📚 References
-Obi-Obuoha A. , Rizama V.S. _"Real-time traffic object detection using detectron 2 with faster R-CNN"_ World Journal of Advanced Research and Reviews Volume 28 Issue 1 2024 Page 2173–2189.
+Obi-Obuoha A., Rizama V.S., Okafor I. _"Real-time traffic object detection using detectron 2 with faster R-CNN"_ World Journal of Advanced Research and Reviews Volume 28 Issue 1 2024 Page 2173–2189.
 [Access the Full Paper](https://wjarr.com/sites/default/files/WJARR-2024-3559.pdf)
 
 ## 📌 Note
