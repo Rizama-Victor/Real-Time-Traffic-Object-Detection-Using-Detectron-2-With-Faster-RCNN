@@ -1,13 +1,20 @@
 # 🛣️ Real-time Traffic Object Detection Using Detectron 2 with Faster RCNN
 This repository contains the implementation of my research titled [_"Real-time Traffic Object Detection Using Detectron 2 with Faster RCNN"_](https://wjarr.com/content/real-time-traffic-object-detection-using-detectron-2-faster-r-cnn), published in World Journal of Advanced Research and Reviews (2024) authored by [Rizama Victor](https://github.com/Rizama-Victor), [Prince Abiamamela Obi-Obuoha](https://github.com/MelaObuoha), and [Ifeanyichukwu Okafor](https://github.com/ifyyy10) at the National Centre for Artificial Intelligence and Robotics (NCAIR), Nigeria.
+
+---
+
 ## 🔍 Overview
 Accurate identification of objects from real-time video is necessary for effective traffic analysis as this plays a vital role in providing drivers and authorities a comprehensive understanding of the road and surrounding environment. Fortunately, modern algorithms such as neural network based architecture with high detection accuracy, like Faster R-CNN are at the center of this process. The project focuses on developing a model capable of identifying key traffic objects such as traffic lights, vehicles, buses, crossroads etc., for urban traffic applications using an interactive Gradio interface and Detectron2’s Faster R-CNN architecture.
+
+---
 
 ## 🎯 Research Objectives
 
 - To develop a computer vision model capable of detecting and identifying multiple key traffic objects such as vehicles, traffic lights, buses, crosswalks, motorcycles etc.
 - To design an interactive Gradio-based interface that allows users to perform live detection on video feeds or static images.
 - To evaluate and visualize the detection performance of the model on real-world traffic data.
+
+---
 
 ## 🛠️ Tools and Technologies Used
 
@@ -26,6 +33,8 @@ Accurate identification of objects from real-time video is necessary for effecti
 | **Model Zoo (Detectron2)**  | Provided the base Faster R-CNN configuration file used for fine-tuning the model.                     |
 | **Metadata (Detectron2)**   | Allowed setting and displaying object class names during visualization.                               |
 | **Visualizer (Detectron2)** | Handled drawing of detection boxes and class labels on images and frames.                             |
+
+---
 
 ## 🪜 Step-by-step Procedure
 1. **Installation and Setup:** This involved the installation of all necessary libraries as already outlined in the **Tools and Technologies** section to ensure that all dependencies required for training and testing the object detection model was available.
@@ -76,6 +85,9 @@ Accurate identification of objects from real-time video is necessary for effecti
 </p>
 
 **Note:** Other test image results can be accessed [**here**](Other_Test_Image_Results)
+
+---
+
 ## 💡Key Insights
 - The dataset distribution revealed that some classes, such as _vehicles_ and _Traffic Lights_ were mostly represented while others such as _Road-traffic_ had no instances at all.
 - Underrepresentation of classes such as _Buses_, and _Bicycles_ might have experienced lower detection accuracy because of the limited number of training samples suggestng that expanding the dataset could enhance the model's performance across all categories.
@@ -83,9 +95,15 @@ Accurate identification of objects from real-time video is necessary for effecti
 - Low peforming classes like _crossroads (12.90%)_ were mostly due to the highly varying visual patterns, which vaired based on environment.
 - Medium performing classes like _Traffic Lights, Motorcycles,_ and _Bicycles_ achived moderate AP values suggesting that while the model performed reasonbaly well in detecting these objects, there was still room for improvemennt.
 
+---
+
 ## 📚 References
 Obi-Obuoha A., Rizama V.S., Okafor I. _"Real-time traffic object detection using detectron 2 with faster R-CNN"_ World Journal of Advanced Research and Reviews Volume 28 Issue 1 2024 Page 2173–2189.
 [Access the Full Paper](https://wjarr.com/sites/default/files/WJARR-2024-3559.pdf)
 
+---
+
 ## 📌 Note
 Please kindly note that this README file is a summarized version of the full implementation of this research. The complete implementation can be accessed via the [program script](Real-Time-Traffic-Object-Detection-Using-Detectron-2-With-Faster-RCNN-MAIN.ipynb) and [interface implementation](Real-Time-Traffic-Object-Detection-Using-Detectron-2-With-Faster-RCNN-GRADIO_INTERFACE.ipynb). Dataset and Model Weights can be provided upon request.
+
+---
