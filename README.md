@@ -31,7 +31,6 @@ Accurate identification of objects from real-time video is necessary for effecti
 | **NumPy**                   | Supported image array manipulation and data preprocessing.                                            |
 | **Matplotlib**              | Used for visualization and performance graph plotting during model training.                          |
 | **Model Zoo (Detectron2)**  | Provided the base Faster R-CNN configuration file used for fine-tuning the model.                     |
-| **Metadata (Detectron2)**   | Allowed setting and displaying object class names during visualization.                               |
 | **Visualizer (Detectron2)** | Handled drawing of detection boxes and class labels on images and frames.                             |
 
 ---
