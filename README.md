@@ -1,4 +1,4 @@
-# 🛣️ Real-time Traffic Object Detection Using Detectron 2 with Faster RCNN
+# 🛣️ Real-time Traffic Object Detection Using Detectron 2 with Faster RCNN.
 This repository contains the implementation of my research titled [_"Real-time Traffic Object Detection Using Detectron 2 with Faster RCNN"_](https://wjarr.com/content/real-time-traffic-object-detection-using-detectron-2-faster-r-cnn), published in World Journal of Advanced Research and Reviews (2024) authored by [Rizama Victor](https://github.com/Rizama-Victor), [Prince Abiamamela Obi-Obuoha](https://github.com/MelaObuoha), and [Ifeanyichukwu Okafor](https://github.com/ifyyy10) at the National Centre for Artificial Intelligence and Robotics (NCAIR), Nigeria.
 
 ---
